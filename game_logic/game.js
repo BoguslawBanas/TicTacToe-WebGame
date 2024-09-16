@@ -24,7 +24,7 @@ const winningConditions = [
 ];
 
 function cpuAI() {
-
+    
 }
 
 function updateResults(){
@@ -41,9 +41,13 @@ function handleCellClick(event) {
     if (board[clickedCellIndex] !== "" || !isGameActive) {
         return; // If the cell is already filled or game is over, ignore the click
     }
-
     updateCell(event.target, clickedCellIndex);
     checkResult();
+}
+
+function updateCell(index) {
+    var id = "c" + index
+    document.getElementById(id).innerHTML("O");
 }
 
 // Update the clicked cell and the game state
@@ -106,8 +110,20 @@ function checkResult() {
 
 // Reset the game board
 function resetGame() {
+    if (game_number === 4) {
+        game_number = 0;
+        draws = 0;
+        games_won_by_o = 0;
+        games_won_by_x = 0;
+        updateResults();
+    }
     board = ["", "", "", "", "", "", "", "", ""];
-    currentPlayer = "X";
+    if (game_number%2 === 0) {
+        currentPlayer = "X";
+    }
+    else {
+        currentPlayer = "O";
+    }
     isGameActive = true;
     messageElement.innerHTML = "";
     cells.forEach(cell => (cell.innerHTML = ""));
