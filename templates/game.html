@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../static/game.css">
+</head>
+<body>
+    <div class="game-board">
+        <div class="cell" id="c0" data-index="0"></div>
+        <div class="cell" id="c1" data-index="1"></div>
+        <div class="cell" id="c2" data-index="2"></div>
+        <div class="cell" id="c3" data-index="3"></div>
+        <div class="cell" id="c4" data-index="4"></div>
+        <div class="cell" id="c5" data-index="5"></div>
+        <div class="cell" id="c6" data-index="6"></div>
+        <div class="cell" id="c7" data-index="7"></div>
+        <div class="cell" id="c8" data-index="8"></div>
+    </div>
+    <div id="message"></div>
+
+    <button id="reset">Restart Game</button><br><br>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <button id="save_to_db">Save to database</button><br><br>
+
+    <h5 id="games_played">Number of games played: 0</h5>
+    <h5 id="games_won_by_x">Number of games won by X: 0</h5>
+    <h5 id="games_won_by_o">Number of gamse won by O: 0</h5>
+    <h5 id="draws">Draws: 0</h5><br>
+
+    <script src="{{url_for('static', filename='game.js')}}"></script>
+</body>
+</html>
