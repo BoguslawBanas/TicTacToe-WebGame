@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>The best players</title>
     <link rel="stylesheet" href="../static/game.css">
 </head>
 <body>
@@ -14,27 +14,25 @@
             <th>Score</th>
         </tr>
         <tr>
-            <td id="p0"></td>
-            <td id="s0"></td>
+            <td id="p0">{{ result[0][1] }}</td>
+            <td id="s0">{{ result[0][2] }}</td>
         </tr>
         <tr>
-            <td id="p1"></td>
-            <td id="s1"></td>
+            <td id="p1">{{ result[1][1] }}</td>
+            <td id="s1">{{ result[1][2] }}</td>
         </tr>
         <tr>
-            <td id="p2"></td>
-            <td id="s2"></td>
+            <td id="p2">{{ result[2][1] }}</td>
+            <td id="s2">{{ result[2][2] }}</td>
         </tr>
         <tr>
-            <td id="p3"></td>
-            <td id="s3"></td>
+            <td id="p3">{{ result[3][1] }}</td>
+            <td id="s3">{{ result[3][2] }}</td>
         </tr>
         <tr>
-            <td id="p4"></td>
-            <td id="s4"></td>
+            <td id="p4">{{ result[4][1] }}</td>
+            <td id="s4">{{ result[4][2] }}</td>
         </tr>
     </table>
-    <button id="button_to_rf_db">Refresh database</button>
-    <script src="../static/table.js"></script>
 </body>
 </html>

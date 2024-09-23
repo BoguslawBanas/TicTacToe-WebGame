@@ -40,9 +40,9 @@ def process():
     score = request.args.get('score')
     insertResult(player, score)
     result=getTenBestResults()
-    print(result)
-    # return render_template("results.html", result=result)
-    return result
+    # print(result[0][1])
+    return render_template("results.html", result=result)
+    # return result
 
 if __name__ == "__main__":
     app.run(port=8080)
